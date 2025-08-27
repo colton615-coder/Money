@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budgets</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="p-6 pb-20">
+    <h1 class="text-2xl font-bold mb-4">Budgets</h1>
+    <div class="bg-white shadow rounded p-4 mb-4">
+      <input id="bname" class="border p-2 mr-2" placeholder="Budget Name">
+      <input id="blimit" type="number" class="border p-2 mr-2" placeholder="Limit">
+      <button onclick="addBudget()" class="bg-green-500 text-white px-4 py-2 rounded">Add</button>
+    </div>
+    <ul id="budgetList"></ul>
+  </div>
+
+  <nav class="fixed bottom-0 w-full bg-white shadow-md flex justify-around p-3">
+    <a href="index.html">Dashboard</a>
+    <a href="expenses.html">Expenses</a>
+    <a href="budgets.html">Budgets</a>
+    <a href="reports.html">Reports</a>
+    <a href="calendar.html">Calendar</a>
+  </nav>
+
+  <script src="script.js"></script>
+  <script>renderBudgets();</script>
+</body>
+</html>
