@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 rounded-b-3xl shadow-lg">
+    <h1 class="text-3xl font-bold">Calendar</h1>
+    <p class="text-blue-100">View expenses by date</p>
+  </div>
+
+  <div class="p-6 pb-20">
+    <ul id="calendarList" class="space-y-2"></ul>
+  </div>
+
+  <nav class="fixed bottom-0 w-full bg-white shadow-md flex justify-around p-3 text-gray-700 font-medium">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="expenses.html">💸 Expenses</a>
+    <a href="budgets.html">📊 Budgets</a>
+    <a href="reports.html">📈 Reports</a>
+    <a href="calendar.html">📅 Calendar</a>
+  </nav>
+
+  <script src="script.js"></script>
+  <script>renderCalendar();</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 rounded-b-3xl shadow-lg">
+    <h1 class="text-3xl font-bold">Reports</h1>
+    <p class="text-blue-100">Visualize your spending</p>
+  </div>
+
+  <div class="p-6 pb-20 space-y-4">
+    <div class="bg-white rounded-xl shadow p-4">
+      <canvas id="pieChart"></canvas>
+    </div>
+    <div class="flex space-x-4">
+      <button onclick="exportCSV()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">📄 Export CSV</button>
+      <button onclick="exportPDF()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">📝 Export PDF</button>
+    </div>
+  </div>
+
+  <nav class="fixed bottom-0 w-full bg-white shadow-md flex justify-around p-3 text-gray-700 font-medium">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="expenses.html">💸 Expenses</a>
+    <a href="budgets.html">📊 Budgets</a>
+    <a href="reports.html">📈 Reports</a>
+    <a href="calendar.html">📅 Calendar</a>
+  </nav>
+
+  <script src="script.js"></script>
+  <script>renderReports();</script>
+</body>
+</html>
